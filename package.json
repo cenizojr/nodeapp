@@ -8,7 +8,7 @@
     "test": "jest",
     "test-jenkins": "jest --reporters=default --reporters=jest-junit",
     "coverage-jenkins": "jest --reporters=default --reporters=jest-junit --coverage --coverageReporters=text --coverageReporters=html --coverageDirectory=./coverage/",
-    "lint": "eslint src/**/*.js -f checkstyle -o coverage/eslint-result.xml"
+    "lint": "eslint src/**/*.js --ignore-pattern '**/*.test.js' -f checkstyle -o coverage/eslint-result.xml"
   },
   "jest-junit": {
     "outputDirectory": "./coverage/",
